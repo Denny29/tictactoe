@@ -1,5 +1,13 @@
+let player = "X";
+let turn = 0;
+let game = false; 
 
-
+function performLogic(buttonId , tileId){
+    $(buttonId).click(function(){
+        $(tileId).html(player);
+    });
+        
+    }
 
 
 
