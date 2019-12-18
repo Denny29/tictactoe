@@ -1,19 +1,13 @@
-let player = "X";
+let player = ["X","O"];
 let turn = 0;
 let game = false; 
+let currentPlayer = player[0];
+function performLogic(buttonId , tileId){  
 
-function performLogic(buttonId , tileId){
     $(buttonId).click(function(){
-        $(tileId).html(player);
-    });
-        
+        $(tileId).html(currentPlayer);
+    });  
     }
-
-function change(){
-    array.forEach(element => {
-        
-    });
-}
 
 
 
