@@ -9,7 +9,11 @@ function performLogic(buttonId , tileId){
         
     }
 
-
+function change(){
+    array.forEach(element => {
+        
+    });
+}
 
 
 
