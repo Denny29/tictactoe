@@ -1,19 +1,31 @@
 let player = ["X","O"];
 let turn = 0;
 let game = false; 
-let currentPlayer = "";
+let currentPlayer = "O";
 
 
 
 function performLogic(buttonId , tileId){  
 
-    $(buttonId).click(function(){
-        player.forEach(function(Player){
-            currentPlayer = Player
-        });
-        
-        $(tileId).html(currentPlayer);
-    });  
+    function changePlayer(){
+        if (currentPlayer === "X"){
+            currentPlayer="O";
+        }
+        else if (currentPlayer==="O") {
+            currentPlayer="X";
+        }
+    }
+    console.log(currentPlayer)
+    changePlayer();
+    $(tileId).html(currentPlayer);
+    turn = turn + 1;
+    if("#tile1"="#tile2"){
+
+    }
+    else if (turn === 9){
+        $("#title").html("It's a Draw!");
+    }
+    
 }
 
 
