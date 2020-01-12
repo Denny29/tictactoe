@@ -6,7 +6,7 @@ let currentPlayer = "O";
 
 function checkWin(tileId1, tileId2, tileId3){
     if(tileId1 === tileId2 && tileId2 === tileId3){
-        $("#title").html(currentPlayer + "wins!");
+        game = true;
     }
 }
 
@@ -14,17 +14,26 @@ function checkVerticalWins(){
     checkWin("#tile1", "#tile4", "#tile7");
     checkWin("#tile2", "#tile5", "#tile8");
     checkWin("#tile3", "#tile6", "#tile9");  
+    if (game === true){
+         $("#title").html(currentPlayer+" wins!");
+    }
 }
 
 function checkHoritzontalWins(){
     checkWin("#tile1", "#tile2", "#tile3");
     checkWin("#tile4", "#tile5", "#tile6");
-    checkWin("#tile7", "#tile8", "#tile9");  
+    checkWin("#tile7", "#tile8", "#tile9");
+    if (game === true){
+         $("#title").html(currentPlayer+" wins!");
+    }  
 }
 
 function checkDiagonalWins(){
     checkWin("#tile1", "#tile5", "#tile9");
     checkWin("#tile3", "#tile5", "#tile7");
+    if (game === true){
+         $("#title").html(currentPlayer+" wins!");
+    }
 }
 
 function performLogic(buttonId , tileId){  
