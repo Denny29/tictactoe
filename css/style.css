@@ -4,6 +4,12 @@
     flex-wrap:wrap;
 }
 
+body{
+     background-image: url("https://www.dictionary.com/e/wp-content/uploads/2018/03/circle_game-1.jpg");
+     background-repeat: no-repeat;
+     
+
+}
 .tile {
     width:23%;
     padding:5%;
