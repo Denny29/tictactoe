@@ -5,8 +5,12 @@ let currentPlayer = "O";
 
 
 function checkWin(tileId1, tileId2, tileId3){
-    if(tileId1 === tileId2 && tileId2 === tileId3){
+    if(
+        $(tileId1).text() === $(tileId2).text() &&
+        $(tileId2).text() === $(tileId3).text()
+    ){
         game = true;
+        return game;
     }
 }
 
